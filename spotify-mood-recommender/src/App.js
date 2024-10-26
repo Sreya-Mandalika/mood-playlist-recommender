@@ -36,7 +36,7 @@ function App() {
     setPlaylists(results); 
   };
 
-  // formatting for the title - white font and with and emoji
+  // formatting for the title - white font and with and emoji - generally AI generated, adjusted colors + size
   return (
     <div className="App" style={{ backgroundColor: '#000', minHeight: '100vh', padding: '20px' }}>
       <header className="App-header" style={{ textAlign: 'center' }}>
