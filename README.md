@@ -23,30 +23,29 @@ feature**) and provides a random list of playlists, its creators, and the links 
    Otherwise, you can install it at the Node.js official website.
 
 4. Install Dependencies
+      In the terminal, while in the project directory, run the following command to install the necessary dependencies:
+     ```
+     npm install
+     ```
+5. Set Up Environment Variables
 
-  In the terminal, while in the project directory, run the following command to install the necessary dependencies:
-  ```
-  npm install
-  ```
-5. Set Up Environment Variables:
+   Create your Spotify API client secret and client id and add them to your .env file. Please make sure that they are in this formatL
+   ```
+   REACT_APP_SPOTIFY_CLIENT_ID=your_id
+   REACT_APP_SPOTIFY_CLIENT_SECRET=your_secret
+   ```
+6. Run the App
 
-Create a .env file in the root of your project directory to store your Spotify API credentials.
-Add your Spotify API access token (or any other necessary environment variables) to the .env file in the format:
-makefile
-Copy code
-REACT_APP_SPOTIFY_ACCESS_TOKEN=your_access_token_here
-Make sure to replace your_access_token_here with your actual Spotify API access token.
-Run the App:
+   Start the development server by running:
+   ```
+   npm start
+   ```
+Enjoy the app! You can now use the Spotify Mood Playlist Finder app! Enter a mood or keyword in the search box, and the app will display 10 random playlists based on your input.
 
-Start the development server by running:
-bash
-Copy code
-npm start
-This command will start the app and open it in your default web browser. If it doesn't open automatically, you can access it by going to http://localhost:3000.
-Enjoy the App:
+## API Usage
+I used the Spotify API for this project, as it is the music platform I regularly use. The spotify API is free to use, and it is integrated into the project in the Spotify.js file. The program uses the "search playlist" feature of the API. It takes the first 50 playlists from the keywords a user searches and randomly displays 10 to the user. That function is then imported into the App.js file.
 
-You can now use the Spotify Mood Playlist Finder app! Enter a mood or keyword in the search box, and the app will display 10 random playlists based on your input.
+## AI Generation
 
-Instructions on how to set up and run the project.
-Information about the API used and how it's integrated.
-Credits for AI-generated code portions - tell me how you used it.
+The AI generated code is primarily used to style the program. While I coded parts to search playlists from the Spotify API and randomly select a few 
+(primarily the Spotify.js file and the beginning portion of the App.js file til the formatting of the application), I prompted Chat-GPT to help generate general code on how to structure an application like this (ex. should the playlists be numbered? how should the playlists be aligned on the page?). From there, I was able to implement that general code into this project - I added the specific colors I wanted and played around with the padding until I was satisfied with the results. As such, the formatting credits primarily go to AI (which is highlighted in the App.js file).
